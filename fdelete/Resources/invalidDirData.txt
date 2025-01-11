@@ -1,0 +1,17 @@
+C:\
+C:\Windows
+C:\Windows\System32
+C:\Program Files
+C:\Program Files (x86)
+C:\Users
+C:\Users\Default
+C:\Users\Public
+C:\Windows\Temp
+C:\Windows\System32\config
+C:\Windows\Winsxs
+C:\Windows\Boot
+C:\Windows\SoftwareDistribution
+C:\Windows\Installer
+C:\Windows\System32\drivers
+C:\ProgramData
+C:\Recovery

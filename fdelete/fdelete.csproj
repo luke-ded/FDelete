@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>documents.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\allExtensions.txt" />
+    <None Remove="Resources\dirLBData.txt" />
+    <None Remove="Resources\extLBData.txt" />
+    <None Remove="Resources\invalidDirData.txt" />
+    <None Remove="Resources\invalidFileData.txt" />
+    <None Remove="Resources\settingsData.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="documents.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\allExtensions.txt" />
+    <EmbeddedResource Include="Resources\dirLBData.txt" />
+    <EmbeddedResource Include="Resources\extLBData.txt" />
+    <EmbeddedResource Include="Resources\invalidDirData.txt" />
+    <EmbeddedResource Include="Resources\invalidFileData.txt" />
+    <EmbeddedResource Include="Resources\settingsData.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AddInvalidFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddInvalidDir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
