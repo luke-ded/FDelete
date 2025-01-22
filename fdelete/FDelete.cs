@@ -51,8 +51,10 @@ namespace fdelete
         private void InitSaveFolder()
         {
             // Create Resources folder
-            Directory.CreateDirectory(Path.Combine(Application.StartupPath, "Resources"));
+            DirectoryInfo newFolder = new DirectoryInfo(Path.Combine(Application.StartupPath, "Resources"));
 
+            newFolder.Create();
+            newFolder.Attributes |= FileAttributes.Hidden;
 
             InitFile("allExtensions.txt", true);
             InitFile("dirLBData.txt", false);
@@ -381,7 +383,7 @@ namespace fdelete
         private void runBT_Click(object sender, EventArgs e)
         {
             int numFiles;
-
+      
             if ((numFiles = op.DeleteExt(extLB, dirLB, subCheck)) > -1)
                 MessageBox.Show("Successfully removed " + numFiles +" file(s).", "Complete", 
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -850,6 +852,8 @@ namespace fdelete
 
         private void runDir(CheckedListBox extLB, string dir)
         {
+            if(dir == resourcesPath) return;
+
             string[] files;
 
             for (int i = 0; i < extLB.CheckedItems.Count; i++)
