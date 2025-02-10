@@ -57,7 +57,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, settingsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1355, 42);
+            menuStrip1.Size = new Size(1355, 40);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -65,13 +65,13 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(71, 38);
+            fileToolStripMenuItem.Size = new Size(71, 36);
             fileToolStripMenuItem.Text = "File";
             // 
             // aboutMenuItem
             // 
             aboutMenuItem.Name = "aboutMenuItem";
-            aboutMenuItem.Size = new Size(359, 44);
+            aboutMenuItem.Size = new Size(212, 44);
             aboutMenuItem.Text = "About";
             aboutMenuItem.Click += aboutMenuItem_Click;
             // 
@@ -79,7 +79,7 @@
             // 
             editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addExtensionMenuItem, addInvalidDirMenuItem, addInvalidFileMenuItem });
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(74, 38);
+            editToolStripMenuItem.Size = new Size(74, 36);
             editToolStripMenuItem.Text = "Edit";
             // 
             // addExtensionMenuItem
@@ -107,7 +107,7 @@
             // 
             settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { extCheckMenuItem, dirCheckMenuItem, subCheckMenuItem, delUnCheckMenuItem });
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(127, 38);
+            settingsToolStripMenuItem.Size = new Size(127, 36);
             settingsToolStripMenuItem.Text = " Settings";
             // 
             // extCheckMenuItem
@@ -144,9 +144,9 @@
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(23, 93);
             label1.Name = "label1";
-            label1.Size = new Size(261, 32);
+            label1.Size = new Size(262, 32);
             label1.TabIndex = 1;
-            label1.Text = "Enter file extention(s): ";
+            label1.Text = "Enter file extension(s): ";
             // 
             // extTB
             // 
