@@ -854,21 +854,16 @@ namespace fdelete
         {
             if(dir == resourcesPath) return;
 
-            string[] files;
+            string[] files = Directory.GetFiles(dir);
 
-            for (int i = 0; i < extLB.CheckedItems.Count; i++)
+            foreach (string file in files)
             {
-                files = Directory.GetFiles(dir);
-
-                foreach (string file in files)
+                if (extUsed.Contains(Path.GetExtension(file)) && !invalidFiles.Contains(file) && extLB.CheckedItems.Contains(Path.GetExtension(file)))
                 {
-                    if (extUsed.Contains(Path.GetExtension(file)) && !invalidFiles.Contains(file))
-                    {
-                        System.Diagnostics.Debug.WriteLine($"file = " + Path.GetFileName(file));
-                        File.Delete(file);
+                    System.Diagnostics.Debug.WriteLine($"file = " + Path.GetFileName(file));
+                    File.Delete(file);
 
-                        numFiles++;
-                    }
+                    numFiles++;
                 }
             }
         }
