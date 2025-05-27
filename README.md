@@ -1,5 +1,7 @@
 # FDelete
-This Windows application deletes files based on their extension.
+This Windows application deletes files based on their extension.   
+
+![Application Screenshot](Images/application.png)
 
 ## How to Use
 To add an extension to the delete list, type the extension (including the '.') in the indicated textbox and press enter. To add a directory to the search list, type the entire directory in the indicated 
@@ -36,6 +38,9 @@ Enable/disable deleting unchecked list items. If enabled, unchecked extensions a
 
 ## Updating
 Currently, updating the program will require re-downloading from this page.
+
+## The Code
+This is a .NET Windows application written in C#.
 
 ## Future Improvements
 If interest is shown, I will create a Windows service that periodically runs this program in the background. I may also add loading configuration files.
